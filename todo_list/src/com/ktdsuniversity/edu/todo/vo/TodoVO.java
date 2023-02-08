@@ -3,7 +3,7 @@ package com.ktdsuniversity.edu.todo.vo;
 public class TodoVO {
 	
 	private String itemName;
-	private Boolean isSuccess;
+	private boolean isSuccess;
 	
 	public TodoVO(String itemName) {
 		setItemName(itemName);
@@ -17,11 +17,11 @@ public class TodoVO {
 		this.itemName = itemName;
 	}
 
-	public Boolean getIsSuccess() {
+	public boolean isSuccess() {
 		return isSuccess;
 	}
 
-	public void setIsSuccess(Boolean isSuccess) {
+	public void setIsSuccess(boolean isSuccess) {
 		this.isSuccess = isSuccess;
 	}
 	

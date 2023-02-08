@@ -39,6 +39,7 @@ public class TodoController {
 				System.out.println("TODO명을 입력하세요");
 				String todo = scan.nextLine();
 				if ( service.create(todo) ) {
+					
 					System.out.println("아이템이 등록되었습니다.");
 				}
 				
@@ -54,7 +55,7 @@ public class TodoController {
 					System.out.println("아이템이 존재하지 않습니다.");
 				}
 				else {
-					if (todoVO.getIsSuccess()) {
+					if (todoVO.isSuccess()) {
 						System.out.println("[X]" + todoVO.getItemName());
 					}
 					else {
@@ -83,7 +84,7 @@ public class TodoController {
 					
 					boolean isSuccess = false;
 					
-					if (todo.getIsSuccess()) {
+					if (todo.isSuccess()) {
 						// 이미 완료된 건
 						System.out.println("이미 완료된 건입니다. 미완료로 변경할까요? (Y/N)");
 						String yn = scan.nextLine();
